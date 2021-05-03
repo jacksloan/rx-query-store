@@ -2,7 +2,7 @@
 
 # RxQueryStore
 
-Simple, type-safe, framework agnostic state management for javascript applications
+Simple, type-safe state management for javascript applications
 
 # Install
 ```
