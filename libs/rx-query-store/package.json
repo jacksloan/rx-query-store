@@ -1,4 +1,7 @@
 {
   "name": "rx-query-store",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "peerDependencies": {
+    "rxjs": "~6.6.3"
+  }
 }
