@@ -142,6 +142,38 @@
           }
         }
       }
+    },
+    "rx-query-store": {
+      "root": "libs/rx-query-store",
+      "sourceRoot": "libs/rx-query-store/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/rx-query-store/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/rx-query-store"],
+          "options": {
+            "jestConfig": "libs/rx-query-store/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "build": {
+          "builder": "@nrwl/node:package",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/libs/rx-query-store",
+            "tsConfig": "libs/rx-query-store/tsconfig.lib.json",
+            "packageJson": "libs/rx-query-store/package.json",
+            "main": "libs/rx-query-store/src/index.ts",
+            "assets": ["libs/rx-query-store/*.md"]
+          }
+        }
+      }
     }
   }
 }
